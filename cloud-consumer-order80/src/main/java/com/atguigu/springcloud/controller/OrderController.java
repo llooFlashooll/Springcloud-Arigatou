@@ -24,7 +24,7 @@ import java.util.List;
 public class OrderController
 {
     //public static final String PAYMENT_URL = "http://localhost:8001";
-
+    // 微服务名称不用写死
     public static final String PAYMENT_URL = "http://CLOUD-PAYMENT-SERVICE";
 
     // 调用的是restTemplate中的方法
