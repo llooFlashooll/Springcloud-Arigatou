@@ -57,6 +57,7 @@ public class PaymentController
     @GetMapping(value = "/payment/discovery")
     public Object discovery()
     {
+        // 获取微服务各种信息，服务发现
         List<String> services = discoveryClient.getServices();
         for (String element : services) {
             log.info("*****element: "+element);
