@@ -6,10 +6,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
-/**
- * @auther zzyy
- * @create 2020-02-19 20:33
- */
+// 模仿着源码写
 @Component
 public class MyLB implements LoadBalancer
 {
@@ -29,7 +26,7 @@ public class MyLB implements LoadBalancer
         return next;
     }
 
-    //负载均衡算法：rest接口第几次请求数 % 服务器集群总数量 = 实际调用服务器位置下标  ，每次服务重启动后rest接口计数从1开始。
+    //负载均衡算法：rest接口第几次请求数 % 服务器集群总数量 = 实际调用服务器位置下标，每次服务重启动后rest接口计数从1开始。
     @Override
     public ServiceInstance instances(List<ServiceInstance> serviceInstances)
     {
